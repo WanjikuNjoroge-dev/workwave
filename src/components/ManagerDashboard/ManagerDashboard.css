@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table, th, td {
+    border: 1px solid #d1d5da;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f7f7f7;
+  }
+  
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  

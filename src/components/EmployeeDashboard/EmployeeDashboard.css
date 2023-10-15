@@ -1,0 +1,53 @@
+.dashboard-container {
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.dashboard-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+.dashboard-form h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.dashboard-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.dashboard-form textarea, .dashboard-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d1d5da;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.dashboard-button {
+    display: block;
+    background-color: #0366d6;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
