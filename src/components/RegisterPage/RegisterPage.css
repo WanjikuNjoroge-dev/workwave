@@ -27,7 +27,7 @@
   }
   
   .register-button {
-    background-color: #007bff;
+    background-color: #FF5722;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -37,6 +37,6 @@
   }
   
   .register-button:hover {
-    background-color: #0056b3;
+    background-color: #FF5722;
   }
   

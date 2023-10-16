@@ -1,53 +1,92 @@
 .dashboard-container {
-    background: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
 }
 
-.dashboard-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 600px;
-    max-width: 90%;
-    margin-bottom: 20px;
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4CAF50;
+    display: inline-block;
 }
 
-.dashboard-form h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 10px;
-}
-
-.dashboard-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.dashboard-form textarea, .dashboard-form input {
+.task-input {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
     width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #d1d5da;
-    margin-bottom: 15px;
-    box-sizing: border-box;
 }
 
-.dashboard-button {
-    display: block;
-    background-color: #0366d6;
-    color: #ffffff;
-    border: none;
+.task-input input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.tasks-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.task-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: calc(33.33% - 20px);
+    padding: 25px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.task-title {
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+select, input[type="number"] {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 20px;
-    border-radius: 4px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    text-align: center;
-    margin: 0 auto;
+    align-self: center;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+span {
+    color: #FF5722;
 }
