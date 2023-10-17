@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './LoginPage.css';
+import { colors } from '@mui/material';
 
 const LoginPage = () => {
+  const [showModal, setShowModal] = useState(false);
   const { setIsAuthenticated } = useContext(AuthContext);
   const [loginDetails, setLoginDetails] = useState({ email: '', password: '', role: '' });
 
@@ -21,7 +23,7 @@ const LoginPage = () => {
       .then((response) => response.text())
       .then((data) => {
         if (data === 'Login successful') {
-          setIsAuthenticated(true);   
+          setIsAuthenticated(true);
 
           // Check the user's role and redirect accordingly
           if (loginDetails.role === 'manager') {
@@ -65,7 +67,24 @@ const LoginPage = () => {
           Login
         </button>
 
-        <Link to="/register">Register</Link>
+        {/* <Link to="/register">Register</Link> */}
+
+        {/* <div className="home-buttons"> */}
+      <p>Don't have an account? </p>
+        <Link className="" onClick={() => setShowModal(true)}>Register here</Link>
+
+        <div id="roleModal" className={`role-modal ${showModal ? "show-modal" : ""}`} onClick={() => setShowModal(false)}>
+          <div className="role-modal-content" onClick={e => e.stopPropagation()}>
+            <span id="closeModal" className="close" onClick={() => setShowModal(false)}>&times;</span>
+            <h2>Choose Your Role</h2>
+            <p>Are you an employer looking to monitor tasks? Or an employee aiming to track your accomplishments? Make your choice below:</p>
+            <Link to="/register-manager" className="role-btn">I'm a Manager</Link>
+            <Link to="/register-employee" className="role-btn">I'm an Employee</Link>
+          </div>
+        </div>
+
+
+        {/* </div> */}
       </div>
     </div>
   );

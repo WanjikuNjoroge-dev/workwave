@@ -1,24 +1,59 @@
 .login-container {
-    background: url('https://images.unsplash.com/photo-1503945438517-a1d3faa680e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXw2MDA4NHwwfDF8c2VhcmNofDF8fHdvcmtzcGFjZXxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=4000') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .login-form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px 60px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-width: 90%;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #007BFF;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #FF5722;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #FF5722;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FF5722;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
