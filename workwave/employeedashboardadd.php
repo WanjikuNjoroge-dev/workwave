@@ -8,14 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $status = $task['status'];
         $hours = $task['hours'];
         $feedbackRequested = $task['feedbackRequested'];
-    
-         try {
+
         // Add the database connection code here (use your provided database credentials)
+        // Create a PDO connection
         $dbHost = 'localhost';
         $dbName = 'workwave1';
         $dbUser = 'workwave';
         $dbPass = '123456';
 
+        try {
             // Create a PDO connection
             $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -34,4 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "Invalid request method.";
 }
+
 ?>

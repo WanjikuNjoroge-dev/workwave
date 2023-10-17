@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Retrieve the user's stored hashed password from the "employees" table
-        $stmt = $pdo->prepare("SELECT password, role FROM employees WHERE email = ?");
+        $stmt = $pdo->prepare("SELECT password FROM employees WHERE email = ?");
         $stmt->execute([$email]);
         $row = $stmt->fetch();
 
@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Verify the password
             if (password_verify($password, $storedPassword)) {
                 // Return the user's role and "Login successful"
-                echo $row['role'] === 'manager' ? 'Login successful as manager' : 'Login successful as employee';
             } else {
                 echo 'Invalid password';
             }
